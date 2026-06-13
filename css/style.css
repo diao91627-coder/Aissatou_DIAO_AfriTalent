@@ -88,7 +88,7 @@ img{
     /* COMMIT4 */
 
 
-    
+
     * hero */
 .hero{
     padding: 80px 5%;
@@ -482,4 +482,100 @@ html, body{
 .btn1:hover,
 .btn2:hover{
     transform: translateY(-2px);
+}
+
+
+
+
+
+/* ===== COMMIT 5 : RESPONSIVE DESIGN ===== */
+
+/* Empêche le scroll horizontal */
+body {
+    overflow-x: hidden;
+}
+
+/* -------- MOBILE FIRST (375px par défaut) -------- */
+
+/* Textes */
+h1 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Images adaptatives */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Boutons */
+.btn {
+    font-size: 14px;
+    padding: 10px 18px;
+}
+
+/* Navbar mobile */
+@media (max-width: 767px) {
+
+    .navbar-collapse {
+        background: #0d6efd;   /* bleu bootstrap */
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px;
+    }
+
+    /* cartes en pleine largeur mobile */
+    .card {
+        margin-bottom: 20px;
+    }
+
+    /* sections moins espacées */
+    section {
+        padding: 30px 15px;
+    }
+}
+
+/* -------- TABLETTE (768px) -------- */
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+}
+
+/* -------- DESKTOP (1200px+) -------- */
+@media (min-width: 1200px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 70px 30px;
+    }
 }
