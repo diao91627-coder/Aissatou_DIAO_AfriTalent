@@ -13,7 +13,160 @@ rel="stylesheet">
 <body> 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+            <nav class="navbar navbar-expand-lg   bg-primary navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-Menu" aria-controls="nav-Menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+      
+    
+    
 
+            <div class="logo">
+                 <img src="images/AfriTalent.jpg" height="70" alt="logo" class="logo AfriTalent"/>
+                 <span class="nom-de-logo">AfriTalent</span>
+               
+            </div>
+            <div class="navbar-collapse" id="nav-Menu">
+             <ul class="navbar-nav ms-auto">
+               <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+               <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+              <li class="nav-item"><a class="nav-link" href="Freelances.html">Freelances</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+               <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
+               <li>
+               <a href="index.html" class="btn">Rejoindre AfriTalent</a>
+               </li>
+             </ul>
+            </div>
+            </div>
+            </div>
+            </nav>
+
+            
+              <div class="container my-5">
+  <h1 class="mb-4">Contactez-nous</h1>
+  
+  <div class="row g-5">
+    <!-- Colonne Formulaire -->
+    <div class="col-lg-7">
+      <form id="contactForm" novalidate>
+        <!-- Message succès -->
+        <div id="successMessage" class="alert alert-success d-none" role="alert">
+          Message envoyé avec succès ! Nous vous répondrons bientôt.
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="nom" class="form-label">Nom *</label>
+            <input type="text" class="form-control" id="nom" required>
+            <div class="invalid-feedback">Le nom est requis.</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="prenom" class="form-label">Prénom *</label>
+            <input type="text" class="form-control" id="prenom" required>
+            <div class="invalid-feedback">Le prénom est requis.</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email *</label>
+          <input type="email" class="form-control" id="email" required>
+          <div class="invalid-feedback">Veuillez entrer un email valide.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="sujet" class="form-label">Sujet *</label>
+          <select class="form-select" id="sujet" required>
+            <option value="">Choisissez un sujet</option>
+            <option value="support">Support technique</option>
+            <option value="partenariat">Partenariat</option>
+            <option value="autre">Autre demande</option>
+          </select>
+          <div class="invalid-feedback">Veuillez choisir un sujet.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label">Message *</label>
+          <textarea class="form-control" id="message" rows="5" required></textarea>
+          <div class="invalid-feedback">Le message doit contenir au moins 20 caractères.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+      </form>
+    </div>
+
+               <div class="col-lg-5">
+      <h4>Informations de contact</h4>
+      <p class="text-muted"><i class="bi bi-envelope me-2"></i>contact@afritalent.com</p>
+      <p class="text-muted"><i class="bi bi-telephone me-2"></i>+221 77 123 45 67</p>
+      <p class="text-muted"><i class="bi bi-geo-alt me-2"></i>123 Avenue Cheikh Anta Diop, Dakar</p>
+      
+      <h4 class="mt-4">Nous trouver</h4>
+      <!-- Carte Google Maps intégrée demandée -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.143155717!2d-17.444053685158!3d14.693700089755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f5b3b6f9f1%3A0x4b4b4b4b!2sDakar!5e0!3m2!1sfr!2ssn!4v1700000000000" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+            </section>
+             <footer class=" pt-4 pb-2 mt-5"  >
+  <div class="container-fluid">
+    <div class="row">
+      
+      <!-- Colonne 1 : AfriTalent -->
+      <div class="col-md-3 mb-3">
+        <h3>AfriTalent</h3>
+        <p class="small">Plateforme qui connecte les talents africains aux entreprises.</p>
+        <a href="#" class="text-dark me-3"><i class="bi bi-twitter"></i></a>
+        <a href="#"  class="text-dark me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+      </div>
+
+      <!-- Colonne 2 : Liens utiles -->
+      <div class="col-md-3 mb-3">
+        <h3>Liens utiles</h3>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-dark text-decoration-none">Accueil</a></li>
+          <li><a href="freelances.html" class="text-dark text-decoration-none">Freelances</a></li>
+          <li><a href="tarifs.html" class="text-dark text-decoration-none">Tarifs</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 3 : Ressources -->
+      <div class="col-md-3 mb-3">
+        <h3>Ressources</h3>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark text-decoration-none">Blog</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">FAQ</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 4 : Contact -->
+      <div class="col-md-3 mb-3">
+        <h3>Contact</h3>
+        <p class="small text-dark text-decoration-none">
+          <i class="bi bi-envelope"></i> contact@afritalent.sn<br>
+          <i class="bi bi-geo-alt"></i> Dakar, Sénégal
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Ligne copyright avec année dynamique -->
+    <hr class="bg-secondary">
+    <p class="text-center small mb-0">
+      © <span id="year"></span> AfriTalent. Tous droits réservés.
+    </p>
+  </div>
+  
     
     </body>
 </html>
