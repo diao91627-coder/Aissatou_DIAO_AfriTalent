@@ -76,3 +76,69 @@ if (topBtn) {
   });
 }
  
+
+
+
+/////////////////////COMMIT7//////////////
+
+// ===== COMPTEURS INDEX.HTML =====
+const stats = document.querySelectorAll(".hero-stats .stat-card h3");
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const stat = entry.target;
+      const finalValue = parseInt(stat.textContent);
+      let count = 0;
+
+      const update = () => {
+        const increment = finalValue / 100;
+
+        if (count < finalValue) {
+          count += increment;
+          stat.textContent = Math.ceil(count) + "+";
+          setTimeout(update, 20);
+        } else {
+          stat.textContent = finalValue + "+";
+        }
+      };
+
+      update();
+      statsObserver.unobserve(stat);
+    }
+  });
+});
+
+stats.forEach(stat => statsObserver.observe(stat));
+
+
+
+// ===== COMPTEURS ABOUT.HTML =====
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counter = entry.target;
+      const target = +counter.getAttribute("data-target");
+      let count = 0;
+
+      const updateCounter = () => {
+        const increment = target / 100;
+
+        if (count < target) {
+          count += increment;
+          counter.textContent = Math.ceil(count);
+          setTimeout(updateCounter, 20);
+        } else {
+          counter.textContent = target;
+        }
+      };
+
+      updateCounter();
+      counterObserver.unobserve(counter);
+    }
+  });
+});
+
+counters.forEach(counter => counterObserver.observe(counter));
