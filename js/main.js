@@ -142,3 +142,96 @@ const counterObserver = new IntersectionObserver((entries) => {
 });
 
 counters.forEach(counter => counterObserver.observe(counter));
+
+// ////////////*COMMIT8////////
+// ===== FILTRAGE FREELANCES =====
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const profiles = document.querySelectorAll(".profile");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        const category = this.getAttribute("data-category");
+
+        // changer le style du bouton actif
+        filterButtons.forEach(btn => {
+            btn.classList.remove("btn-primary");
+            btn.classList.add("btn-outline-primary");
+        });
+
+        this.classList.remove("btn-outline-primary");
+        this.classList.add("btn-primary");
+
+        // filtrer les profils
+        profiles.forEach(profile => {
+            if (category === "all" || profile.classList.contains(category)) {
+                profile.style.display = "block";
+            } else {
+                profile.style.display = "none";
+            }
+        });
+    });
+});
+
+// ===== VALIDATION FORMULAIRE CONTACT =====
+
+const form = document.getElementById("contactForm");
+
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let isValid = true;
+
+        const nom = document.getElementById("nom");
+        const prenom = document.getElementById("prenom");
+        const email = document.getElementById("email");
+        const sujet = document.getElementById("sujet");
+        const message = document.getElementById("message");
+        const successMessage = document.getElementById("successMessage");
+
+        // regex email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // reset erreurs
+        [nom, prenom, email, sujet, message].forEach(field => {
+            field.classList.remove("is-invalid");
+        });
+
+        // vérifications
+        if (nom.value.trim() === "") {
+            nom.classList.add("is-invalid");
+            isValid = false;
+        }
+
+        if (prenom.value.trim() === "") {
+            prenom.classList.add("is-invalid");
+            isValid = false;
+        }
+
+        if (!emailRegex.test(email.value.trim())) {
+            email.classList.add("is-invalid");
+            isValid = false;
+        }
+
+        if (sujet.value === "") {
+            sujet.classList.add("is-invalid");
+            isValid = false;
+        }
+
+        if (message.value.trim().length < 20) {
+            message.classList.add("is-invalid");
+            isValid = false;
+        }
+
+        // succès
+        if (isValid) {
+            successMessage.classList.remove("d-none");
+            form.reset();
+
+            setTimeout(() => {
+                successMessage.classList.add("d-none");
+            }, 3000);
+        }
+    });
+}
