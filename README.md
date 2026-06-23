@@ -1,7 +1,7 @@
 # AfriTalent
 # Description
 AfriTalent est un site web qui met en valeur les talents africains et aidea connecter des freelances avec des opportunites
-#Technologies utilise 
+## Technologies utilise 
 ## .HTML5
 ## .CSS3
 ## .JavaScript
